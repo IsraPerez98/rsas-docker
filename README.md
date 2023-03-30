@@ -7,13 +7,13 @@ This is a docker image for the [Rocket Streaming Audio Server (RSAS)](https://ro
 - Pull the image from docker hub
 
 ```bash
-docker pull israperez98/rsas
+docker pull israperez98/rsas-docker
 ```
 
 - Build the image from the Dockerfile
 
 ```bash
-docker build -t israperez98/rsas https://github.com/IsraPerez98/rsas-docker
+docker build -t israperez98/rsas-docker https://github.com/IsraPerez98/rsas-docker
 ```
 
 ## Usage
@@ -21,11 +21,11 @@ docker build -t israperez98/rsas https://github.com/IsraPerez98/rsas-docker
 ### docker run
 
 ```bash
-docker run --name rsas -d --restart=always \
+docker run --name rsas-docker -d --restart=always \
 --publish 8000:8000 \
 --volume /path/to/your/rsas.xml:/etc/rsas/rsas.xml \
 --volume /path/to/your/license.key:/etc/rsas/license.key \
-israperez98/rsas
+israperez98/rsas-docker
 ```
 ### docker-compose
 
@@ -35,9 +35,9 @@ version: "3"
 
 services:
 
-  rsas:
-    image: israperez98/rsas
-    container_name: rsas
+  rsas-docker:
+    image: israperez98/rsas-docker
+    container_name: rsas-docker
     restart: always
     ports:
       - 8000:8000

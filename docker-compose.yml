@@ -2,9 +2,9 @@ version: "3"
 
 services:
 
-  rsas:
-    image: israperez98/rsas
-    container_name: rsas
+  rsas-docker:
+    image: israperez98/rsas-docker
+    container_name: rsas-docker
     restart: always
     ports:
       - 8000:8000
