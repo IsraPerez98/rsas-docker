@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  rsas:
+    image: israperez98/rsas
+    container_name: rsas
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - /path/to/your/rsas.xml:/etc/rsas/rsas.xml
+      - /path/to/your/license.key:/etc/rsas/license.key

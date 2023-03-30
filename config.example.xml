@@ -1,0 +1,27 @@
+<!-- 
+Simple Example Configuration for RSAS with one stream, listening on port 8000.
+
+Usage: Rename this file to rsas.xml and run "rsas -c /etc/rsas/rsas.xml" to use it.
+
+For more examples, please see:
+https://rocketbroadcaster.com/streaming-audio-server/docs/configuration/examples.html 
+
+-->
+
+<icecast>
+    <listen-socket>
+        <port>8000</port>
+        <bind-address>0.0.0.0</bind-address> <!-- listen on all interfaces -->
+    </listen-socket>
+
+    <mount>
+        <mount-name>/radio</mount-name>
+        <username>source</username>
+        <password>hackme</password>
+    </mount>
+    <mount>
+        <mount-name>/dockerized</mount-name>
+        <username>source</username>
+        <password>hackme</password>
+    </mount>
+</icecast>
